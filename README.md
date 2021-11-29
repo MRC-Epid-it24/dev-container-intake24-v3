@@ -6,8 +6,9 @@
 - Install [Visual Studio Code](https://code.visualstudio.com/)
 - Install the [Remote Development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack).
 - Pull this repository
+- Run `cd intake24_v3` from the root of this repository.
+- Pull the Intake24 deployment [repository](https://github.com/intake24/deployment) and all other neccessary repositories in `intake24_v3` folder
 - [Spin-up the Dev container](https://vscode-eastus.azurewebsites.net/docs/remote/containers-tutorial)
-- pull the Intake24 deployment [repository](https://github.com/intake24/deployment).
 - In the case of AWS copy your aws *.pem file to the workspace
 - Run chmod 600 on the key file
 - Follow instructions in Intake24(v3) deployment repository.
