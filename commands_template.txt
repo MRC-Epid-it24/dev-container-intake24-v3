@@ -1,0 +1,11 @@
+# Export FoodList (from the api-server root directory)
+## sbt
+databaseTools/runMain uk.ac.ncl.openlab.intake24.sql.tools.food.FoodListExport --db-config-dir /workspaces/intake24_v3 --locale en_AU  --output-file /workspaces/intake24_v3/intake24_v3/output/foodList_en_AU_07032023.csv
+
+databaseTools/runMain uk.ac.ncl.openlab.intake24.sql.tools.food.FoodListExport --db-config-dir /workspaces/intake24_v3 --locale UK_V2_2022 --output-file /workspaces/intake24_v3/intake24_v3/output/foodList_UK_V2_2022_07032023_from_AU_intake24.csv
+
+# Associated Foods Export (from the api-server root directory)
+##sbt
+databaseTools/runMain uk.ac.ncl.openlab.intake24.sql.tools.food.AssociatedFoodsExport --db-config-dir /workspaces/intake24_v3 --locale en_AU  --output-file /workspaces/intake24_v3/intake24_v3/output/associatedFoodsExport_en_AU_07032023_from_AU_intake24.csv
+
+databaseTools/runMain uk.ac.ncl.openlab.intake24.sql.tools.food.AssociatedFoodsExport --db-config-dir /workspaces/intake24_v3 --locale UK_V2_2022 --output-file /workspaces/intake24_v3/intake24_v3/output/associatedFoodsExport_UK_V2_2022_07032023_from_UK_intake24.csv

@@ -1,0 +1,7 @@
+{
+    "host": "host.docker.internal:63333",
+    "useSsl": false,
+    "database": "intake24_foods",
+    "user": "intake24",
+    "password": "password"
+}

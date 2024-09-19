@@ -1,49 +1,51 @@
 {
-	"name": "Java 8",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			// Use the VARIANT arg to pick a Debian OS version: buster, bullseye
-			// Use bullseye when running on local arm64/Apple Silicon.
-			"VARIANT": "bullseye",
-			// Options
-			"INSTALL_MAVEN": "true",
-			"INSTALL_GRADLE": "true",
-			"INSTALL_NODE": "true",
-			"NODE_VERSION": "14.7",
-			"GRADLE_VERSION": "5.5.1",
-			"INSTALL_SCALA": "true",
-			"SCALA_VERSION": "2.13.5",
-			"INSTALL_SBT": "true",
-			"SBT_VERSION":"1.5.1"
-		}
-	},
+  "name": "Java 8",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      // Use the VARIANT arg to pick a Debian OS version: buster, bullseye
+      // Use bullseye when running on local arm64/Apple Silicon.
+      "VARIANT": "bullseye",
+      // Options
+      "INSTALL_MAVEN": "true",
+      "INSTALL_GRADLE": "true",
+      "INSTALL_NODE": "true",
+      "NODE_VERSION": "14.7",
+      "GRADLE_VERSION": "5.5.1",
+      "INSTALL_SCALA": "true",
+      "SCALA_VERSION": "2.13.5",
+      "INSTALL_SBT": "true",
+      "SBT_VERSION": "1.5.1"
+    }
+  },
 
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash",
-		"java.home": "/docker-java-home",
-		"java.import.gradle.java.home": "/usr/local/sdkman/candidates/java/current",
-		"java.configuration.runtimes": [{
-			"default": true,
-			"name": "JavaSE-1.8",
-			"path": "/usr/local/sdkman/candidates/java/current"
-		}]
-	},
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "java.home": "/docker-java-home",
+    "java.import.gradle.java.home": "/usr/local/sdkman/candidates/java/current",
+    "java.configuration.runtimes": [
+      {
+        "default": true,
+        "name": "JavaSE-1.8",
+        "path": "/usr/local/sdkman/candidates/java/current"
+      }
+    ]
+  },
 
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"vscjava.vscode-java-pack",
-		"scala-lang.scala",
-		// "scalameta.metals"
-	],
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "scala-lang.scala"
+    // "scalameta.metals"
+  ],
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "java -version",
 
-	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
 }
